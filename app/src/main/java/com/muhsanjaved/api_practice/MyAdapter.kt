@@ -51,6 +51,7 @@ class MyAdapter(val context: Context , private val productArrayList: List<Produc
             intent.putExtra("brand", currentItem.brand)
             intent.putExtra("category", currentItem.category)
             intent.putExtra("thumbnail", currentItem.thumbnail)
+            // Error How to show multiple Images
             intent.putExtra("image0", currentItem.images[0])
             intent.putExtra("image1", currentItem.images[1])
             intent.putExtra("image2", currentItem.images[2])
