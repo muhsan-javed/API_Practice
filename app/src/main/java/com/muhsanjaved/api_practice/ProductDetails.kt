@@ -14,6 +14,8 @@ class ProductDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_details)
 
+        supportActionBar?.hide()
+
         val id = intent.getIntExtra("id",0)
         val title = intent.getStringExtra("title")
         val description = intent.getStringExtra("description")
@@ -24,7 +26,11 @@ class ProductDetails : AppCompatActivity() {
         val brand = intent.getStringExtra("brand")
         val category = intent.getStringExtra("category")
         val thumbnail = intent.getStringExtra("thumbnail")
-        val images = intent.getStringExtra("images")
+        val image0 = intent.getStringExtra("image0")
+        val image1 = intent.getStringExtra("image1")
+        val image2 = intent.getStringExtra("image2")
+        val image3 = intent.getStringExtra("image3")
+        val image4 = intent.getStringExtra("image4")
 
 
         //val id = findViewById<TextView>(R.id.id)
@@ -37,7 +43,11 @@ class ProductDetails : AppCompatActivity() {
         val productBrand = findViewById<TextView>(R.id.productBrand)
         val productCategory = findViewById<TextView>(R.id.productCategory)
         val productThumbnail = findViewById<ImageView>(R.id.productThumbnail)
-        //val productImages = findViewById<TextView>(R.id.productImages)
+        val productImage0 = findViewById<ImageView>(R.id.productImage0)
+        val productImage1 = findViewById<ImageView>(R.id.productImage1)
+        val productImage2 = findViewById<ImageView>(R.id.productImage2)
+        val productImage3 = findViewById<ImageView>(R.id.productImage3)
+        val productImage4 = findViewById<ImageView>(R.id.productImage4)
 
         Picasso.get().load(thumbnail).into(productThumbnail)
         productTitle.text = title
@@ -48,6 +58,12 @@ class ProductDetails : AppCompatActivity() {
         productStock.text = getString(R.string.stock) + stock.toString()
         productBrand.text = getString(R.string.brand) + brand
         productCategory.text = getString(R.string.category) + category
+
+        Picasso.get().load(image0).into(productImage0)
+        Picasso.get().load(image1).into(productImage1)
+        Picasso.get().load(image2).into(productImage2)
+        Picasso.get().load(image3).into(productImage3)
+        Picasso.get().load(image4).into(productImage4)
     }
 
 }

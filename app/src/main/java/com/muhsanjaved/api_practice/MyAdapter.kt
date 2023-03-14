@@ -51,7 +51,11 @@ class MyAdapter(val context: Context , private val productArrayList: List<Produc
             intent.putExtra("brand", currentItem.brand)
             intent.putExtra("category", currentItem.category)
             intent.putExtra("thumbnail", currentItem.thumbnail)
-            // intent.putExtra("images", currentItem.images)
+            intent.putExtra("image0", currentItem.images[0])
+            intent.putExtra("image1", currentItem.images[1])
+            intent.putExtra("image2", currentItem.images[2])
+            intent.putExtra("image3", currentItem.images[3])
+            intent.putExtra("image4", currentItem.images[4])
             context.startActivity(intent)
         }
 
