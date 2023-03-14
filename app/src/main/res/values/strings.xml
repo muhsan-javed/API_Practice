@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Api Practice</string>
+    <string name="description">Description : </string>
+    <string name="price">price : </string>
+    <string name="discount_percentage">Discount Percentage : </string>
+    <string name="rating">Rating : </string>
+    <string name="stock">stock : </string>
+    <string name="brand">brand : </string>
+    <string name="category">category : </string>
+</resources>
