@@ -47,13 +47,12 @@ class ProductDetails : AppCompatActivity() {
         val productImage1 = findViewById<ImageView>(R.id.productImage1)
         val productImage2 = findViewById<ImageView>(R.id.productImage2)
         val productImage3 = findViewById<ImageView>(R.id.productImage3)
-        val productImage4 = findViewById<ImageView>(R.id.productImage4)
 
         Picasso.get().load(thumbnail).into(productThumbnail)
         productTitle.text = title
         productDescription.text = getString(R.string.description) + description
         productPrice.text = getString(R.string.price) +price.toString()
-        productDiscountPercentage.text = getString(R.string.discount_percentage) +" "+ discountPercentage.toString()
+        productDiscountPercentage.text = getString(R.string.discount_percentage) + discountPercentage.toString()
         productRating.text = getString(R.string.rating) + rating.toString()
         productStock.text = getString(R.string.stock) + stock.toString()
         productBrand.text = getString(R.string.brand) + brand
@@ -63,7 +62,7 @@ class ProductDetails : AppCompatActivity() {
         Picasso.get().load(image1).into(productImage1)
         Picasso.get().load(image2).into(productImage2)
         Picasso.get().load(image3).into(productImage3)
-        Picasso.get().load(image4).into(productImage4)
+
     }
 
 }
