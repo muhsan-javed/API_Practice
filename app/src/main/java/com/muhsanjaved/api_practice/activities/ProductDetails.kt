@@ -1,10 +1,12 @@
-package com.muhsanjaved.api_practice
+package com.muhsanjaved.api_practice.activities
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
+import com.muhsanjaved.api_practice.R
 import com.squareup.picasso.Picasso
 
 class ProductDetails : AppCompatActivity() {
@@ -21,7 +23,7 @@ class ProductDetails : AppCompatActivity() {
         val description = intent.getStringExtra("description")
         val price = intent.getIntExtra("price",0)
         val discountPercentage = intent.getIntExtra("discountPercentage",0)
-        val rating = intent.getIntExtra("rating",0)
+        val ratings = intent.getIntExtra("rating",0)
         val stock = intent.getIntExtra("stock",0)
         val brand = intent.getStringExtra("brand")
         val category = intent.getStringExtra("category")
@@ -39,6 +41,7 @@ class ProductDetails : AppCompatActivity() {
         val productPrice = findViewById<TextView>(R.id.productPrice)
         val productDiscountPercentage = findViewById<TextView>(R.id.productDiscountPercentage)
         val productRating = findViewById<TextView>(R.id.productRating)
+        val productRatingBar = findViewById<RatingBar>(R.id.productRatingBar)
         val productStock = findViewById<TextView>(R.id.productStock)
         val productBrand = findViewById<TextView>(R.id.productBrand)
         val productCategory = findViewById<TextView>(R.id.productCategory)
@@ -53,7 +56,11 @@ class ProductDetails : AppCompatActivity() {
         productDescription.text = getString(R.string.description) + description
         productPrice.text = getString(R.string.price) +price.toString()
         productDiscountPercentage.text = getString(R.string.discount_percentage) + discountPercentage.toString()
-        productRating.text = getString(R.string.rating) + rating.toString()
+        //productRating.text = getString(R.string.rating) + rating.toString()
+//        productRatingBar.setOnRatingBarChangeListener(RatingBar.OnRatingBarChangeListener { ratingBar, rating, fromUser ->
+//            productRatingBar.rating = ratings
+//        })
+        //productRatingBar.rating = rating.toFloat()
         productStock.text = getString(R.string.stock) + stock.toString()
         productBrand.text = getString(R.string.brand) + brand
         productCategory.text = getString(R.string.category) + category

@@ -1,13 +1,14 @@
-package com.muhsanjaved.api_practice
+package com.muhsanjaved.api_practice.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.telecom.Call.Details
 import android.util.Log
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.muhsanjaved.api_practice.R
+import com.muhsanjaved.api_practice.adapters.MyAdapter
+import com.muhsanjaved.api_practice.apis.ApiInterface
+import com.muhsanjaved.api_practice.models.MyData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<MyData?>, t: Throwable) {
                 // if api call fail
-                Log.d("Main Activity ", "onFailure: ${t.message}")
+                Log.d("Main Activity ", "onFailure: ${t.message.toString()}")
             }
         })
 

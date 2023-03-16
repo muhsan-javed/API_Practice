@@ -1,4 +1,4 @@
-package com.muhsanjaved.api_practice
+package com.muhsanjaved.api_practice.models
 
 // Step 2
 data class Product(

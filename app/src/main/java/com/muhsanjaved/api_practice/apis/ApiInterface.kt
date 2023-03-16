@@ -1,5 +1,6 @@
-package com.muhsanjaved.api_practice
+package com.muhsanjaved.api_practice.apis
 
+import com.muhsanjaved.api_practice.models.MyData
 import retrofit2.Call
 import retrofit2.http.GET
 
